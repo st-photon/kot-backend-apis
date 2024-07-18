@@ -1,5 +1,6 @@
-package com.photon.modules.product.domain;
+package com.photon.modules.product.repository;
 
+import com.photon.modules.product.entity.Product;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
