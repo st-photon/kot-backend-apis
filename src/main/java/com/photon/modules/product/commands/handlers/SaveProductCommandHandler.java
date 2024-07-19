@@ -7,9 +7,11 @@ import com.photon.modules.product.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+@Service("SaveProductCommandHandler")
 @Slf4j
-@Component(value = "com.photon.modules.product.commands.request.SaveProductCommandRequest")
+@CommandHandler(requestBeanName = "com.photon.modules.product.commands.request.SaveProductCommandRequest")
 public class SaveProductCommandHandler extends BaseCommand implements ICommand {
 
     private final ProductRepository productRepository;
