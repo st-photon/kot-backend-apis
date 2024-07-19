@@ -1,0 +1,1 @@
+insert into product (`name`, `price`, `description`) values ('pencil', 20.0, 'buy pencil');

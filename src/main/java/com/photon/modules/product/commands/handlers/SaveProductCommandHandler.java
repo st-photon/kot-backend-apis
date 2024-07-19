@@ -1,21 +1,16 @@
 package com.photon.modules.product.commands.handlers;
 
-import com.photon.core.commandinvoker.CommandHandler;
-import com.photon.core.commandinvoker.CommandRequest;
-import com.photon.core.commandinvoker.CommandResponse;
-import com.photon.core.commandinvoker.ICommand;
+import com.photon.core.commandinvoker.*;
 import com.photon.modules.product.commands.request.SaveProductCommandRequest;
 import com.photon.modules.product.entity.Product;
 import com.photon.modules.product.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-@Service("SaveProductCommandHandler")
 @Slf4j
-@CommandHandler(requestBeanName = "com.photon.modules.product.commands.request.SaveProductCommandRequest")
-public class SaveProductCommandHandler implements ICommand {
+@Component(value = "com.photon.modules.product.commands.request.SaveProductCommandRequest")
+public class SaveProductCommandHandler extends BaseCommand implements ICommand {
 
     private final ProductRepository productRepository;
 
