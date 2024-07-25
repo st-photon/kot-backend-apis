@@ -8,7 +8,7 @@ public class BaseIT extends AbstractCoreBaseIT {
     @Autowired
     public ApplicationContext applicationContext;
 
-    public Object getBean(Class<?> clazz) {
+    public <T> T getBean(Class<T> clazz) {
         return applicationContext.getBean(clazz);
     }
 }

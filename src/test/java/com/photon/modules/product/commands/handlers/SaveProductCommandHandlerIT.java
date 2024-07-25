@@ -31,8 +31,8 @@ public class SaveProductCommandHandlerIT extends BaseIT {
 
     @BeforeEach
     public void setup() {
-        this.saveProductCommandHandler = (SaveProductCommandHandler) getBean(SaveProductCommandHandler.class);
-        this.productRepository = (ProductRepository) getBean(ProductRepository.class);
+        this.saveProductCommandHandler = getBean(SaveProductCommandHandler.class);
+        this.productRepository = getBean(ProductRepository.class);
     }
 
     @Test
